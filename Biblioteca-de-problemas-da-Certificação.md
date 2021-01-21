@@ -9,7 +9,6 @@ Prestar atenção se o valor dos bits 2 (numero cartão), 4 (valor), 41 (termina
 Obs.: Toda transação de cancelamento e desfazimento é precedida de uma transação de compra. Ou seja, para um cancelamento geralmente é enviada uma transação de compra e depois o envio do cancelamento da compra.
 
 
-
 **2- Cancelamento parcial, sendo negado como Cancelamento não encontrado:**
 Conferir as seguintes informações na mensagem de entrada da transação, segundo o manual para reconhecer que é um cancelamento parcial, o Bit 24 deve estar com o valor 401, e o Bit 54 deve ter o valor original que se encontra no bit 4 da transação de compra)
 Trecho no manual: consultar por "reversão parcial" Pág. 75/313
