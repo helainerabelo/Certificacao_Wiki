@@ -55,4 +55,4 @@ Após acessar o Odin, serão listados diversos ambientes, nós da Certificação
 ![image.png](/.attachments/image-371236e8-51f3-4f1d-b080-38ece27dab17.png)
 
 ## Reiniciar o Odin
-![image.png](/.attachments/image-0afe0e17-3b00-4115-ac43-3b3249550670.png)
+![image.png](/.attachments/image-ed77c32f-dd58-4083-8c7a-20ed41f37d07.png)
