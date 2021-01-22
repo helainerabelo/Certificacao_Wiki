@@ -43,3 +43,13 @@ Utilizado para realizar alguns procedimentos com a VPN ou com criação de cart�
 Abaixo donwload de collections utilizadas:
 [Pier.postman_collection.json](/.attachments/Pier.postman_collection-bfafea14-535e-496d-95a6-f34139611dc7.json)
 [VPN.postman_collection.json](/.attachments/VPN.postman_collection-ab58c6eb-5593-4ad9-b2d0-b3ba43ecddf2.json)
+
+## - Rancher
+Aplicação utilizada para ver logs do Odin e reinicar Odin quando necessário.
+Acesso: https://rancher-gcp-hml.devcdt.com.br/login
+Necessita de liberação por parte da conductor para acesso, depois de liberado é acessado com mesmos dados do e-mail e teams.
+
+![image.png](/.attachments/image-07f9d574-1d8c-41c9-ab97-f59595f06d62.png)
+
+Após acessar o Odin, serão listados diversos ambientes, nós da Certificação utilizados o ambiente "odin-cert"
+![image.png](/.attachments/image-371236e8-51f3-4f1d-b080-38ece27dab17.png)
