@@ -5,3 +5,6 @@
 [doc_liquidacao_elo (2).md](/.attachments/doc_liquidacao_elo%20(2)-698ebaa2-4518-4cfa-bfa1-c61fe514850d.md)
 e
 [liquidacao.sql](/.attachments/liquidacao-4a96f302-9905-4996-aabb-6fe8471a138b.sql)
+
+**3- Link do Odin - Autorizador Conductor**
+https://rancher-gcp-hml.devcdt.com.br/login
