@@ -35,6 +35,6 @@ id_operacao - Select * from tiposoperacoes
 É pq estourou o limite da operação que nesse caso era de 500 reais (coluna valorMaximo na tabela tiposoperacoes), então essa regra "VALIDA_VALOR_OPERACAO" barra a transação.
 
 
-## 5- "modoConsultaDados" : "BASE_DE_DADOS"
+## 5- "motivoResposta" : "ERRO_BUSCA_DADOS"
 
 Esse erro acontece quando alguma procedure está desatualizada, das duas últimas vezes eu tive que perguntar a Arthur quais atualizar. Mas algumas vezes o log do Odin já informa a procedure. Geralmente é para Executar a procedure na base do emissor.
