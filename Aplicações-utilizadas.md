@@ -18,6 +18,17 @@ Senha: cdt@123
 ## - DataGrip
 Necessário realizar download.
 Ferramenta para acesso ao Banco de Dados, necessita de uma licença adquirida pela Labsit (solicitar ao Rodrigo Silveira)
+- Configuração Banco Odin:
+![image.png](/.attachments/image-c806401b-f587-4e6b-b21e-d1ebbd3b6c64.png)
+
+  ![image.png](/.attachments/image-f8406a8c-2742-4525-9f90-c4283cec76ed.png)
+
+IP: 10.75.30.84
+Usuário: odin_teste
+Senha: odin_teste
+DataBase: ODIN_CERT
+
+
 
 ## - Novo Performance
 Não é necessário realizar download, trata-se de um executável desenvolvido pela Conductor para simular o envio de uma transação por parte da Bandeira/Emissor
