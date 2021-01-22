@@ -21,7 +21,8 @@ ps aux | grep gateway
 
 ## Entrar na pasta Log
 
-cd /var/log/gateway/2021-01-15/
+cd /var/log/gateway/2021-01-15/ 
+(lembrando de alterar a data da pasta para a data que deseja consultar o log)
 
 
 
