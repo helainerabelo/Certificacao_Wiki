@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "c3cc9e2b-dc59-451c-97fc-c19e3531651a",
+		"name": "VPN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "VPN - Allowed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "093942dc-8ed8-4704-af83-920bb11ffcc3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://54.207.93.212:8080/api/vpn/allowed",
+					"protocol": "http",
+					"host": [
+						"54",
+						"207",
+						"93",
+						"212"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vpn",
+						"allowed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VPN - Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "093942dc-8ed8-4704-af83-920bb11ffcc3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://54.207.93.212:8080/api/vpn/status",
+					"protocol": "http",
+					"host": [
+						"54",
+						"207",
+						"93",
+						"212"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vpn",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VPN - Allow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "10.70.30.0"
+				},
+				"url": {
+					"raw": "http://54.207.93.212:8080/api/vpn/allow",
+					"protocol": "http",
+					"host": [
+						"54",
+						"207",
+						"93",
+						"212"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vpn",
+						"allow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VPN - Connect",
+			"request": {
+				"auth": {
+					"type": "basic"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "093942dc-8ed8-4704-af83-920bb11ffcc3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "daniele.cadete.ext:UmaSenha_01\r\n"
+				},
+				"url": {
+					"raw": "http://54.207.93.212:8080/api/vpn/connect",
+					"protocol": "http",
+					"host": [
+						"54",
+						"207",
+						"93",
+						"212"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vpn",
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VPN - Re-Connect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "093942dc-8ed8-4704-af83-920bb11ffcc3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "daniele.cadete.ext:UmaSenha_01\r\n"
+				},
+				"url": {
+					"raw": "http://54.207.93.212:8080/api/vpn/re-connect",
+					"protocol": "http",
+					"host": [
+						"54",
+						"207",
+						"93",
+						"212"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vpn",
+						"re-connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "tiago.rosa.ext:UmaSenha_02813673"
+				},
+				"url": {
+					"raw": "http://54.207.93.212:8080/api/vpn/generate/HENRIQUE",
+					"protocol": "http",
+					"host": [
+						"54",
+						"207",
+						"93",
+						"212"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vpn",
+						"generate",
+						"HENRIQUE"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
