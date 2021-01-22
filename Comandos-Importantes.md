@@ -70,5 +70,5 @@ parar e iniciar xinetd é necessário após inserir ou alterar um arquivo de gat
 
 telnet ip porta
 
-* substituir ip e porta pelos dados a serem testados, exemplo: 192.168.0.1 2023
+* substituir ip e porta pelos dados a serem testados, exemplo: telnet 192.168.0.1 2023
 
