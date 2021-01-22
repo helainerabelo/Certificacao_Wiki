@@ -1,4 +1,4 @@
-# **Aqui encontra-se uma lista de comandos mais utilizados dentro da aplicação MobaXTerm**
+Aqui encontra-se uma lista de comandos mais utilizados dentro da aplicação MobaXTerm
 
 
 ##  Entrar na pasta gateway
