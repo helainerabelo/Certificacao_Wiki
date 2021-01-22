@@ -6,7 +6,7 @@ Necessita criação de um usuário e importação de um arquivo;
 
 ## - MobaXTerm
 Necessário realizar download.
-Aplicação utilizada para acesso realização de Sign On, acesso aos logs e configurações de atf e gateways
+Aplicação utilizada para realização de Sign On, acesso aos logs e configurações de atf e gateways
 - Configuração:
 
 ![image.png](/.attachments/image-ca7fd295-26d7-4022-880e-d64505d74df9.png)
