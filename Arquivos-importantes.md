@@ -8,3 +8,10 @@ e
 
 **3- Link do Odin - Autorizador Conductor**
 https://rancher-gcp-hml.devcdt.com.br/login
+
+**4- Link do SGR - Usado pela certificação para o processamento do arquivo de liquidação**
+https://10.75.130.18:8080/
+
+**5- Link do storage do SGR, onde importar os arquivos da liquidação para que o SGR execute a rotina**
+https://portal.azure.com/#home
+-> Caminho: Storage accounts -> sgrgkehmlg -> File shares -> sgrgkehmlg -> sgr-hmlg-primario -> importacao -> conciliaÃ§Ã£o new elo -> builderjobimportararquivoincoming -> "importar o arquivo da liquidação aqui"
