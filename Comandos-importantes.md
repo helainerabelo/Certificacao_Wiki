@@ -73,3 +73,10 @@ telnet ip porta
 
 * substituir ip e porta pelos dados a serem testados, exemplo: telnet 192.168.0.1 2023
 
+
+
+## Ver log no Odin, pelo "Execute Shell", que fica acima do "View Logs"
+
+tail -n 100000 odin.log | grep 142603 -A 120 -B 60
+
+* 142603 = NSU da transação
