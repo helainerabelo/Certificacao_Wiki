@@ -40,3 +40,8 @@ id_operacao - Select * from tiposoperacoes
 Esse erro acontece quando alguma procedure está desatualizada, das duas últimas vezes eu tive que perguntar a Arthur quais atualizar. Mas algumas vezes o log do Odin já informa a procedure. Geralmente é para Executar a procedure na base do emissor.
 * Se o log apresentar o nome da procedure que está impactando, procurar pelo nome da procedure na base espelho 10.70.30.221, copiar colar o conteúdo em uma nova execução para a base do emissor, prestar atenção se o schema está correto e se não tiver o Drop já embutido na procedure rodar ele antes. Executar toda a procedure.
 DROP PROCEDURE [dbo].[NomeDaProcedure]
+
+
+## 6- ATC DUPLICADO 
+
+Negar uma transação com o mesmo ATC, nesse caso são passadas duas transações e a segunda deve ser negada por duplicidade, é só ativar a regra "ATF" descrição "Valida se o ATC é o mesmo que está na BASE." em REGRAS_ASSOCIACOES no Odin.
