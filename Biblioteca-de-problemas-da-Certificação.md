@@ -45,3 +45,9 @@ DROP PROCEDURE [dbo].[NomeDaProcedure]
 ## 6- ATC DUPLICADO 
 
 Negar uma transação com o mesmo ATC, nesse caso são passadas duas transações e a segunda deve ser negada por duplicidade, é só ativar a regra "ATF" descrição "Valida se o ATC é o mesmo que está na BASE." em REGRAS_ASSOCIACOES no Odin. Obs.: A mesma regra serviu para o EMV duplicado e para o ATC inferior ao atual.
+
+
+## 7- Não retorna bit 55
+
+Transação 0100 consta bit 55 e no retorno 0110 o mesmo bit não é enviado.
+Foi necessário ativar a regra "CRIPTOGRAMA_THALES" em REGRAS_ASSOCIACOES no Odin.
