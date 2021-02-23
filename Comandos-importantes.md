@@ -26,7 +26,7 @@ cd /var/log/gateway/2021-01-15/
 
 
 
-## Ver Log
+## Ver Log Gateway
 
 tail -f /var/log/gateway/2021-01-18/gateway.log
 
@@ -80,3 +80,9 @@ telnet ip porta
 tail -n 100000 odin.log | grep 142603 -A 120 -B 60
 
 * 142603 = NSU da transação
+
+
+## Ver Log ATF
+
+tail -f /var/log/atf2/2021-02-22/atf2.msg
+* Data deve ser ajustada para a data que se deseja ver o log
