@@ -1,7 +1,5 @@
 **Deve ser executado na base do emissor, para desativar os parâmetros de fraude.**
 
-
-
 ```
 update parametrosemissores
 set
