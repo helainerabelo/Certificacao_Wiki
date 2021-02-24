@@ -11,6 +11,7 @@ select * from parametrosemissores where codigo like '%ODIN_FRAUDE%'
 ```
 
 
+
 Obs.: Para identificar que esse parâmetro está impactando as transações, pode ser visualizado no log do autorizador que os campos são apresentados como Null, e no decorrer do log, exibe algumas informações sobre com o descrito apontando "fraude".
 
 
