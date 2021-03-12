@@ -1,6 +1,6 @@
 Aqui encontra-se a lista de problemas já passados nas certificações anteriores e como foram resolvidos para que possa ajudar a toda a equipe:
 
-## 1- Cancelamento ou Desfazimento não encontrado - Valor Total:
+## 1 - Cancelamento ou Desfazimento não encontrado - Valor Total:
 Prestar atenção se o valor dos bits 2 (numero cartão), 4 (valor), 41 (terminal), 42 (estabelecimento), sendo que obrigatório são os 3 primeiros estarem iguais, pode ser visto na base do Odin a proc (SPR_ODIN_CANCELAR_TRANSACAO).
 
 * Internacional
@@ -9,13 +9,13 @@ Prestar atenção se o valor dos bits 2 (numero cartão), 4 (valor), 41 (termina
 Obs.: Toda transação de cancelamento e desfazimento é precedida de uma transação de compra. Ou seja, para um cancelamento geralmente é enviada uma transação de compra e depois o envio do cancelamento da compra.
 
 
-## 2- Cancelamento parcial, sendo negado como Cancelamento não encontrado:
+## 2 - Cancelamento parcial, sendo negado como Cancelamento não encontrado:
 
 Conferir as seguintes informações na mensagem de entrada da transação, segundo o manual para reconhecer que é um cancelamento parcial, o Bit 24 deve estar com o valor 401, e o Bit 54 deve ter o valor original que se encontra no bit 4 da transação de compra)
 Trecho no manual: consultar por "reversão parcial" Pág. 75/313
 
 
-## 3- "motivoResposta" : "OPERACAO_NAO_ENCONTRADA"
+## 3 - "motivoResposta" : "OPERACAO_NAO_ENCONTRADA"
 
 Isso acontece porque falta o tipo de operação para a transação em questão na tabela vinculosoperacoes na base do emissor, pedir para o pessoal do emissor inserir a informação quando a autorização for externa. No caso que passei foi a Dock.
 
@@ -30,34 +30,34 @@ id_produto - Select * from Produtos where Bin in (655036)  _-- consultar o bin t
 id_operacao - Select * from tiposoperacoes
 
 
-## 4- "motivoResposta" : "OPERACAO_COM_VALOR_INVALIDO"
+## 4 - "motivoResposta" : "OPERACAO_COM_VALOR_INVALIDO"
 
 É pq estourou o limite da operação que nesse caso era de 500 reais (coluna valorMaximo na tabela tiposoperacoes), então essa regra "VALIDA_VALOR_OPERACAO" barra a transação.
 
 
-## 5- "motivoResposta" : "ERRO_BUSCA_DADOS"
+## 5 - "motivoResposta" : "ERRO_BUSCA_DADOS"
 
 Esse erro acontece quando alguma procedure está desatualizada, das duas últimas vezes eu tive que perguntar a Arthur quais atualizar. Mas algumas vezes o log do Odin já informa a procedure. Geralmente é para Executar a procedure na base do emissor.
 * Se o log apresentar o nome da procedure que está impactando, procurar pelo nome da procedure na base espelho 10.70.30.221, copiar colar o conteúdo em uma nova execução para a base do emissor, prestar atenção se o schema está correto e se não tiver o Drop já embutido na procedure rodar ele antes. Executar toda a procedure.
 DROP PROCEDURE [dbo].[NomeDaProcedure]
 
 
-## 6- ATC DUPLICADO 
+## 6 - ATC DUPLICADO 
 
 Negar uma transação com o mesmo ATC, nesse caso são passadas duas transações e a segunda deve ser negada por duplicidade, é só ativar a regra "ATF" descrição "Valida se o ATC é o mesmo que está na BASE." em REGRAS_ASSOCIACOES no Odin. Obs.: A mesma regra serviu para o EMV duplicado e para o ATC inferior ao atual.
 
 
-## 7- Não retorna bit 55
+## 7 - Não retorna bit 55
 
 Transação 0100 consta bit 55 e no retorno 0110 o mesmo bit não é enviado.
 Foi necessário ativar a regra "CRIPTOGRAMA_THALES" em REGRAS_ASSOCIACOES no Odin.
 
-## 8- Senha inválida sendo aprovada
+## 8 - Senha inválida sendo aprovada
 
 Transação aprovando com senha inválida, o correto é negar 55.
 Verificar se a regra SENHA_THALES está ativada, caso não, ativá-la. Essa regra faz a validação da senha.
 
-## 9- "motivoResposta" : "ERRO_NA_VALIDACAO"
+## 9 - "motivoResposta" : "ERRO_NA_VALIDACAO"
 ## "content" : "Erro em callable senha_thales do conjunto class br.com.conductor.odin.core.origem.tecban.ValidadorServiceTecban."
 
 - Na base do emissor, faz a consulta do cartão real e verifica se a coluna SenhaVisa está null:
@@ -71,11 +71,30 @@ from binschaves b join tipochave t on b.id_tipochave=t.id_tipochave
 where bin in (coloca_bin_aqui)
 order by b.bin asc
 
-- Pega a chave correspondente ao IWK. No caso havia uma iwk_tecban, pois a certificação era com a bandeira tecban, nas demais usar a IWK. Exemplo da chave: U802483CDA8757AF17AF437C79657381B
+- Pega a chave correspondente ao IWK. No caso havia uma iwk_tecban, pois a certificação era com a bandeira tecban, nas demais bandeiras usar a IWK. Exemplo da chave: U802483CDA8757AF17AF437C79657381B
 
-- Entra no BP HSM Commander, escolhe a opção JE.  Preenche em Source ZPK com a chave iwk correspondente (U802483CDA8757AF17AF437C79657381B), o PIN block (bit 52), Account NR.: Número do cartão sem os 3 primeiros números e sem o último, Clica na setinha verde.
+- Entra no BP HSM Commander, escolhe a opção JE.  
+Preenche em Source ZPK com a chave iwk correspondente (U802483CDA8757AF17AF437C79657381B), o PIN block  com a informação do bit 52, Account NR.: Número do cartão sem os 3 primeiros números e sem o último. Clica na setinha verde.
 Ao realizar a conversão, pegar o número do PIN apresentado e atualizar o banco onde a SenhaVisa estava null.
 
 
 ![HSM Commander.png](/.attachments/HSM%20Commander-ce016052-722d-4a29-9508-6ac9baefa676.png)
 
+## 10 - "motivoResposta" : "BLOQUEADO_STATUS_CARTAO"
+Ao realizar a consulta pelo cartão informado, foi visto que a quantidade de senhas digitadas erradas estava igual a 3 e o status do cartão estava 29. O cartão havia sido bloqueado pela quantidade de senhas digitadas erradas. Então roda a query de habilitar cartão para uso.
+
+-- Consulta cartão real - Roda na base do emissor
+SELECT * FROM cartoes where cartaohash = HASHBYTES('MD5', '5067070234438564') -- inserir o número do cartão real
+
+-- Desbloquear CARTÃO  (HABILITAR O CARTÃO PARA USO) - Roda na base do emissor
+UPDATE CARTOES SET STATUS = 1, QtdSenhasIncorretas = 0, Estagio = 6
+     where cartaohash = HASHBYTES('MD5', '5067070234438564') -- inserir o número do cartão real
+
+## 11 - "motivoResposta" : CRIPTOGRAMA_INVÁLIDO
+-- Consulta as chaves atreladas ao bin - Roda na base do emissor
+selectDescricao,b.id_binschaves,b.bin,b.chave,b.checkvalue,t.descricao,*
+frombinschavesbjointipochavetonb.id_tipochave=t.id_tipochave
+wherebinin(coloca_bin_aqui)
+orderbyb.binasc
+
+Com o arquivo das chaves da Elo, verifica se o valor da chave AC e o KCV (checkValue) estão iguais com os cadastrados no banco. Se estiver iguais, o problema é que eles estão passando o criptograma errado.
