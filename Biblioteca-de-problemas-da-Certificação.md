@@ -61,7 +61,7 @@ Verificar se a regra SENHA_THALES está ativada, caso não, ativá-la. Essa regr
 ## "content" : "Erro em callable senha_thales do conjunto class br.com.conductor.odin.core.origem.tecban.ValidadorServiceTecban."
 
 - Na base do emissor, faz a consulta do cartão real e verifica se a coluna SenhaVisa está null:
-SELECT SenhaVisa, id_cartão, * FROM cartoes where cartaohash = HASHBYTES('MD5', '5067074204105146')
+SELECT SenhaVisa, id_cartão, * FROM cartoes where cartaohash = HASHBYTES('MD5', '4329570422721090')
 
 - Verifica na msgEntrada o bit 52. Exemplo: 727ED158584A411B;
 
@@ -73,9 +73,9 @@ order by b.bin asc
 
 - Pega a chave correspondente ao IWK. No caso havia uma iwk_tecban, pois a certificação era com a bandeira tecban, nas demais usar a IWK. Exemplo da chave: U802483CDA8757AF17AF437C79657381B
 
-Entra no BP HSM Commander, escolhe a opção JE.  Preenche em Source ZPK com a chave iwk correspondente (U802483CDA8757AF17AF437C79657381B), o PIN block (bit 52), Account NR.: Número do cartão sem os 3 primeiros números e sem o último, Clica na setinha verde.
+- Entra no BP HSM Commander, escolhe a opção JE.  Preenche em Source ZPK com a chave iwk correspondente (U802483CDA8757AF17AF437C79657381B), o PIN block (bit 52), Account NR.: Número do cartão sem os 3 primeiros números e sem o último, Clica na setinha verde.
 Ao realizar a conversão, pegar o número do PIN apresentado e atualizar o banco onde a SenhaVisa estava null.
 
 
-
+![HSM Commander.png](/.attachments/HSM%20Commander-ce016052-722d-4a29-9508-6ac9baefa676.png)
 
