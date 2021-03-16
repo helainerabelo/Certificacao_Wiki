@@ -1,4 +1,4 @@
-Para conseguir visualizar a senha real do cartão, é preciso selecionar a opção 'NG - Decrypt an Encrypted PIN', em seguida preencher os dados:
+Para conseguir visualizar a senha real do cartão, é preciso selecionar a opção 'NG - Decrypt an Encrypted PIN' no HSM Commander, em seguida preencher os dados:
 
 **Account Nr**: Número do cartão real sem os 3 primeiros digitos e sem o último. Exemplo: Número do cartão: 6504140004825600 -> 414000482560
 
