@@ -29,3 +29,7 @@
 ## Negar com modo de entrada 91:
 91 | Voice Response Unit (VRU)/(URA):
 - Ativar a regra 144 | NAO_PERMITE_VOICE_RESPONSE_UNIT_CARTAO_FISICO' | 'Regra que nega transações por modo de entrada Voice Response Unit (VRU)/(URA)');
+
+## Sistema negando por 57:
+"motivoResposta" : "MODO_ENTRADA_NAO_PROCESSADO"
+- Desativar a regra 115 | MODOS_ENTRADA_NAO_PROCESSADOS | Regra que valida os modos de entrada que não são processados pela processadora. E ativar a regra específica do modo de entrada, para que seja negado conforme requisito.
