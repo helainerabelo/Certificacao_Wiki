@@ -80,7 +80,7 @@ _**É necessário mudar**:_
 
 _**É necessário mudar**:_
 - Bit 11: Estorno ≠ da compra
-- Bit 38: de acordo com o código de autorização da transação original
+- Bit 38: de acordo com o código de autorização da transação original (Se tiver na mensageria, no exemplo abaixo não tem)
 - Bit 90 é composto por: 
   1. MTI da transação Original: 0100, 0120, 0200 ou 0400
   1. Bit 11 da Transação Original
