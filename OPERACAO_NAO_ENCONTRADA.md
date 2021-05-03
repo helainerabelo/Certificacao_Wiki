@@ -54,4 +54,4 @@ BEGIN
 			outer apply (select id_operacao,codigoprocessamento from tiposoperacoes where Id_Operacao in (@id_operacao) ) tpos;
 	END
 ```
--- Ao rodar a query acima, serão cadastrados todos os MCC, do id_produto preenchido para id_estabelecimento preenchido.
+-- Ao rodar a query acima, serão cadastrados todos os MCC do id_produto para id_estabelecimento preenchidos.
