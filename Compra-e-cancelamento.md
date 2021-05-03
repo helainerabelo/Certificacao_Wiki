@@ -4,7 +4,7 @@
 
 _**É necessário mudar**:_
 - Bit 11: Estorno ≠ da compra / Desfazimento = da compra
-- Bit 38: de acordo com o código de autorização da transação de compra
+- Bit 38: de acordo com o código de autorização da transação original
 - Bit 90 para transações internacionais é composto por: 
   1. MTI da transação Original: 0100, 0120, 0200 ou 0400;
   1. Bit 11 da Transação Original;
@@ -41,7 +41,7 @@ _Obs.: Para as transações INTERNACIONAIS, as informações da posição 21 a 3
 
 _**É necessário mudar**:_
 - Bit 11: Estorno ≠ da compra / Desfazimento = da compra
-- Bit 38: de acordo com o código de autorização da transação
+- Bit 38: de acordo com o código de autorização da transação original
 - Bit 90 é composto por: 
   1. MTI da transação Original: 0100, 0120, 0200 ou 0400
   1. Bit 11 da Transação Original
@@ -56,7 +56,7 @@ _**É necessário mudar**:_
 ```
 
 **Desfazimento Nacional:**	
-```																																010043382811481404149767200000000000000000
+```
 053014/04/2021 11:48:29:0647|10.19.21.167|073|0420|Conductor||60|[*]002|6505970105553789|003|003000|004|000000013100|007|0414144815|011|433828|012|114815|013|0414|014|2802|018|5712|019|076|022|070|024|400|025|00|032|0025|037|202289033805|038|976720|041|20172289|042|020001605270002|043|ELO                    BARUERI       076|048|*BAN029          012345678901234    *PRD003070|049|986|057|036|058|ALAMEDAXINGU          23543230007612345ELO                  |060|2025100000V00|090|010043382811481404149767200000000000000000|127|12211| 
 ```
 
@@ -80,7 +80,7 @@ _**É necessário mudar**:_
 
 _**É necessário mudar**:_
 - Bit 11: Estorno ≠ da compra / Desfazimento = da compra
-- Bit 38: de acordo com o código de autorização da transação
+- Bit 38: de acordo com o código de autorização da transação original
 - Bit 90 é composto por: 
   1. MTI da transação Original: 0100, 0120, 0200 ou 0400
   1. Bit 11 da Transação Original
@@ -125,7 +125,7 @@ _**É necessário mudar**:_
 
 _**É necessário mudar**:_
 - Bit 11: Estorno ≠ da compra / Desfazimento = da compra
-- Bit 38: de acordo com o código de autorização da transação (Se tiver na mensageria)
+- Bit 38: de acordo com o código de autorização da transação (Se tiver na mensageria, no exemplo abaixo não tem)
 - Bit 90 é composto por: 
   1. MTI da transação Original: 0100, 0120, 0200 ou 0400
   1. Bit 11 da Transação Original
@@ -149,7 +149,7 @@ _**É necessário mudar**:_
 
 _**É necessário mudar**:_
 - Bit 11: Estorno ≠ da compra / Desfazimento = da compra
-- Bit 38: de acordo com o código de autorização da transação
+- Bit 38: de acordo com o código de autorização da transação original
 - Bit 90 é composto por: 
   1. MTI da transação Original: 0100, 0120, 0200 ou 0400
   1. Bit 11 da Transação Original
