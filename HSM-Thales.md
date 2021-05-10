@@ -1,4 +1,26 @@
-**1- Descobrindo "Dados do PIN" - Bit 52**
+**1- Descobrindo o CVV/CVE do cartão**
+
+![image.png](/.attachments/image-4a60cac3-c79c-45b0-8dcd-c8a9e79b947c.png)
+
+Observações:
+Onde o primeiro campo será informado de acordo dependendo da tabela abaixo (concatenando os dois valores, sem espaço ou barra, C2KAC2KB):
+![image.png](/.attachments/image-884cab19-e4e0-441d-b8a5-095c69f31585.png)
+
+Consultas:
+
+No caso do CVE2 = CVV2 e usa o valor do III, as chaves C2KA e C2KB e demais pega na base do emissor com o seguinte select, (coluna chave)
+
+-- select que retorna as chaves C2KA/C2KB e etc
+select Descricao, * from BinsChaves b join TipoChave c on b.Id_TipoChave = c.Id_TipoChave where bin = 650516
+
+Obs.:
+Para configurar a data e saber se mês vem antes do ano:
+CVV1 - AAMM (tarja)
+CVV2 - MMAA (manual)
+ICVV - AAMM (chip)
+
+<br></br>
+**2- Descobrindo "Dados do PIN" - Bit 52**
 
 ![image.png](/.attachments/image-fc424b51-6d15-4f79-b6c6-beac0bfc6541.png)
 
@@ -18,12 +40,12 @@ Select SenhaVisa, SenhaVisaCriptografada, * from cartoes where cartaohash = HASH
 -- 5094670362013464 = Número do cartão real
 ```
 <br></br>
-**2- Descobrir SenhaVisa (caso a coluna esteja vazia na tabela Cartoes)**
+**3- Descobrir SenhaVisa (caso a coluna esteja vazia na tabela Cartoes)**
 
 ![image.png](/.attachments/image-ba44da46-ae57-44a1-bac0-7e91e255c407.png)
 
 <br></br>
-**3- Descobrir a senha real do cartão**
+**4- Descobrir a senha real do cartão**
 
 ![image.png](/.attachments/image-040a63d5-c026-4158-a8d0-9aab73ce41a8.png)
 
