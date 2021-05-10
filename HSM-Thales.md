@@ -1,6 +1,6 @@
 **1- Descobrindo o CVV/CVE do cartão**
 
-![image.png](/.attachments/image-4a60cac3-c79c-45b0-8dcd-c8a9e79b947c.png)
+![image.png](/.attachments/image-244ad500-1540-4356-ad19-e0dcde34ffe9.png)
 
 Observações:
 Onde o primeiro campo será informado de acordo dependendo da tabela abaixo (concatenando os dois valores, sem espaço ou barra, C2KAC2KB):
@@ -47,6 +47,6 @@ Select SenhaVisa, SenhaVisaCriptografada, * from cartoes where cartaohash = HASH
 <br></br>
 **4- Descobrir a senha real do cartão**
 
-![image.png](/.attachments/image-040a63d5-c026-4158-a8d0-9aab73ce41a8.png)
+![image.png](/.attachments/image-393ba639-5bda-434b-9604-2fb309fc9889.png)
 
 
