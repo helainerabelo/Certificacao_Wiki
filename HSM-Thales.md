@@ -18,7 +18,7 @@ Select SenhaVisa, SenhaVisaCriptografada, * from cartoes where cartaohash = HASH
 -- 5094670362013464 = Número do cartão real
 ```
 <br></br>
-**2- Descobrir SenhaVisa (tabela Cartoes)**
+**2- Descobrir SenhaVisa (caso a coluna esteja vazia na tabela Cartoes)**
 
 ![image.png](/.attachments/image-ba44da46-ae57-44a1-bac0-7e91e255c407.png)
 
