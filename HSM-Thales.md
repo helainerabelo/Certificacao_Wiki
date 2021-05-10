@@ -11,7 +11,7 @@ Consultas:
 No caso do CVE2 = CVV2 e usa o valor do III, as chaves C2KA e C2KB e demais pega na base do emissor com o seguinte select, (coluna chave)
 
 -- select que retorna as chaves C2KA/C2KB e etc
-select Descricao, * from BinsChaves b join TipoChave c on b.Id_TipoChave = c.Id_TipoChave where bin = 650516
+`select Descricao, * from BinsChaves b join TipoChave c on b.Id_TipoChave = c.Id_TipoChave where bin = 650516`
 
 Obs.:
 Para configurar a data e saber se mês vem antes do ano:
