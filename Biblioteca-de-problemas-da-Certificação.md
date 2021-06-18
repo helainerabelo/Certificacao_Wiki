@@ -98,3 +98,13 @@ wherebinin(coloca_bin_aqui)
 orderbyb.binasc
 
 Com o arquivo das chaves da Elo, verifica se o valor da chave AC e o KCV (checkValue) estão iguais com os cadastrados no banco. Se estiver iguais, o problema é que eles estão passando o criptograma errado.
+
+## 12 - "motivoResposta" : "CONTA_EM_COBRANCA"
+
+Quando este erro ocorrer será necessário verificar:
+- Status da conta do cartão utilizado e a Data de Vencimento de Cobranças
+select status,DataVencimentoCobranca, * from Contas where Id_Conta in (110)--inserir id_conta do cartão utilizado
+
+Conta deve ter status = 0 e Data de Vencimento Cobrança deve ser uma data futura, para que não caracterize faturamento em atraso, caso a consulta retorne alguma informação diferente desta será necessário alterar a base para voltar a transacionar com cartão;
+
+Outra coisa que pode ser verificada também é a regra de associação "CONTA_EM_ATRASO" ao desabilitar ela também pode ser possível transacionar, porém a situação da conta permanece em cobrança, quando for realizada uma transação do tipo "EventoConsultaStatusConta" o retorno será negativo e se tratando de uma certificação este teste não será aprovado. 
