@@ -58,6 +58,10 @@ Transação aprovando com senha inválida, o correto é negar 55.
 Verificar se a regra SENHA_THALES está ativada, caso não, ativá-la. Essa regra faz a validação da senha.
 
 ## 9 - "motivoResposta" : "ERRO_NA_VALIDACAO"
+
+## Caso de erro na regra cavv_thales deve ser adicionada as chaves CVK_3DS_ACS e CVK_3DS_BAN
+
+
 ## "content" : "Erro em callable senha_thales do conjunto class br.com.conductor.odin.core.origem.tecban.ValidadorServiceTecban."
 
 - Na base do emissor, faz a consulta do cartão real e verifica se a coluna SenhaVisa está null:
@@ -80,7 +84,7 @@ Ao realizar a conversão, pegar o número do PIN apresentado e atualizar o banco
 
 ![HSM Commander.png](/.attachments/HSM%20Commander-ce016052-722d-4a29-9508-6ac9baefa676.png)
 
-## Caso de erro na regra cavv_thales deve ser adicionada as chaves CVK_3DS_ACS e CVK_3DS_BAN
+
 
 ## 10 - "motivoResposta" : "BLOQUEADO_STATUS_CARTAO"
 Ao realizar a consulta pelo cartão informado, foi visto que a quantidade de senhas digitadas erradas estava igual a 3 e o status do cartão estava 29. O cartão havia sido bloqueado pela quantidade de senhas digitadas erradas. Então roda a query de habilitar cartão para uso.
