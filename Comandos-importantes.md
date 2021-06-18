@@ -8,11 +8,19 @@ cd /usr/bin/gateway
 
 ## SIGN ON
 
-./gateway Gatewaymaster_Oslo_Stone_1sj.cfg &
+**Visa**
 
-onde 
-"Gatewaymaster_Oslo_Stone_1sj.cfg" deve ser substituido pelo nome do arquivo de configuração que se deseja utilizar, vai depender da certificação em questão
-& deve sempre ser utilizado para não matar a sessão se a VPN cair ou fechar o terminal
+./gateway GatewayVisa_Digimais_Certificacao.cfg &
+
+
+**Master**
+./gateway.mastercard Gatewaymaster_Oslo_Stone_1sj.cfg &
+
+**onde** 
+
+**"Gatewaymaster_Oslo_Stone_1sj.cfg"** deve ser substituido pelo nome do arquivo de configuração que se deseja utilizar, vai depender da certificação em questão
+
+**&** deve sempre ser utilizado para não matar a sessão se a VPN cair ou fechar o terminal
 
 ## Listar processos de gateway já iniciados
 ps aux | grep gateway
@@ -34,7 +42,13 @@ ou, se estiver na pasta correta pode-se apenas usar o comando específico
 
 tail -f gateway.log
 
+* Data deve ser ajustada para a data que se deseja ver o log
 
+
+## Ver Log de erro do Gateway
+tail -f /var/log/gateway/2021-06-17/gateway.err
+
+* Data deve ser ajustada para a data que se deseja ver o log
 
 
 ## Parar TODOS os processos de Gateway
@@ -63,7 +77,7 @@ service xinetd stop
 
 service xinetd start
 
-parar e iniciar xinetd é necessário após inserir ou alterar um arquivo de gateway
+**** parar e iniciar xinetd é necessário após inserir ou alterar um arquivo de gateway
 
 
 
