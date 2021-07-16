@@ -9,4 +9,4 @@ case TAMANHO_CARTAO_INVALIDO;
 
 Para negar em transações [exceto cancelamento] é necessário ativar a regra ENVIO_DADOS_TRANSACAO_ORIGINAL e não enviar o bit 90
 
-Para negar por 30 em transação de CANCELAMENTO pode enviar o número do cartão no bit 02 sem 1 dígito.
+Para negar por 30 em transação de REVERSÃO DE CANCELAMENTO pode enviar o número do cartão no bit 02 sem 1 dígito.
