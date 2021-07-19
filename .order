@@ -12,7 +12,7 @@ Service-Code
 PIER-%2D-Dados-Cartão
 Modos-de-Entrada
 HSM-Thales
-Desativar-Fraude-(Base-do-Emissor)
+Desativar-Fraude-(Base-do-Emissor)-%2D-Quando-a-transação-chega-com-dados-null-no-log-do-Odin
 Negar-por-30
 Forçar-duplicidade-transação-no-simulador
 Regra-de-Associação-%2D-Base-Odin
