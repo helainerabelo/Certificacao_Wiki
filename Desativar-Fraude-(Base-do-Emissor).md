@@ -1,16 +1,23 @@
+Para identificar que esse parâmetro está impactando as transações, pode ser visualizado no log do autorizador que os campos são apresentados como Null, e no decorrer do log, exibe algumas informações sobre com o descrito apontando "fraude".
+
+
 **Deve ser executado na base do emissor, para desativar os parâmetros de fraude.**
+
 
 ```
 update parametrosemissores
 set
 logico = 0
 where codigo like '%ODIN_FRAUDE%'
-select * from parametrosemissores where codigo like '%ODIN_FRAUDE%'
+select * from parametrosemissores where codigo like 'ODIN_FRAUDE'
+-- DESATIVA O PARAMETRO DO FALCON --->>> JARVIS
+update parametrosemissores set 
+logico = 0
+where codigo like '%FALCON%'
+select * from parametrosemissores where codigo like '%falcon%'
 ```
 
 
-
-Obs.: Para identificar que esse parâmetro está impactando as transações, pode ser visualizado no log do autorizador que os campos são apresentados como Null, e no decorrer do log, exibe algumas informações sobre com o descrito apontando "fraude".
 
 
 Exemplo:
