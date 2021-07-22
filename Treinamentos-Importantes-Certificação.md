@@ -8,7 +8,7 @@ https://conductor-my.sharepoint.com/:v:/g/personal/renata_sousa_ext_conductor_on
 **Vídeo Cipher, configuração de bins, cartões, token**
 https://web.microsoftstream.com/video/93bdd9a3-3782-439e-9698-aedf4a9ff15e
 
-** Vídeo com o pessoal do Odin ensinando a configurar o ambiente, desde o Gateway **
+**Vídeo com o pessoal do Odin ensinando a configurar o ambiente, desde o Gateway**
 https://web.microsoftstream.com/video/9e25b734-1747-4169-bdaa-e6b91d4f5f7b
 
 **Vídeo Conhecimento em Visa Direct e WhatsApp Pay**
