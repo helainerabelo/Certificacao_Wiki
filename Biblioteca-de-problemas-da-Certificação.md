@@ -114,3 +114,7 @@ select status,DataVencimentoCobranca, * from Contas where Id_Conta in (110)--ins
 Conta deve ter status = 0 e Data de Vencimento Cobrança deve ser uma data futura, para que não caracterize faturamento em atraso, caso a consulta retorne alguma informação diferente desta será necessário alterar a base para voltar a transacionar com cartão;
 
 Outra coisa que pode ser verificada também é a regra de associação "CONTA_EM_ATRASO" ao desabilitar ela também pode ser possível transacionar, porém a situação da conta permanece em cobrança, quando for realizada uma transação do tipo "EventoConsultaStatusConta" o retorno será negativo e se tratando de uma certificação este teste não será aprovado. 
+
+## 13 - Retorno do bit 54
+
+Quando não quiser que retorne o bit 54 deve desativar a regra RETORNA_SALDO
