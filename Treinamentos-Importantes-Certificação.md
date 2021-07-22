@@ -1,4 +1,4 @@
-**Vídeo processo compra Conductor**
+**Vídeo Treinamento Inicial - Processamento**
 https://web.microsoftstream.com/video/4cff5a5b-6bb2-4d85-9101-f831eb22bde0
 
 **Vídeo demonstrativo - Clearing Master e Visa (Arquivo de Liquidação)**
