@@ -2,7 +2,7 @@ Ao ser apresentado o erro de "OPERACAO_NAO_ENCONTRADA":
 
 - Verificar se a base já possui a tabela temp_odin_debug:
 ```
-select * from dbo.temp_odin_debug;
+select Id_Produto, Id_Estabelecimento, * from dbo.temp_odin_debug;
 ```
 
 -- Se tiver: Com o retorno da consulta, ver o registro da transação e pegar o CodigoProcessamento, o CodigoMCC (Código retornado é o convertido), Id_Estabelecimento e Id_Produto:
