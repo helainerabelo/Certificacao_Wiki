@@ -8,7 +8,7 @@ O service code é composto por três dígitos, abaixo entenderemos o que signifi
          **2** - com trilha e chip.
 
 - [ ]      Tipo nacional:
-        É utilizado o numero 5 ou 6 para cartão do tipo internacional,
+        É utilizado o numero 5 ou 6 para cartão do tipo nacional,
       em que o numero:
 
      **5** -  com trilha (tarja magnética);
