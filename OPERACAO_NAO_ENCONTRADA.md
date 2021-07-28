@@ -35,8 +35,7 @@ BEGIN
     IF NOT EXISTS(SELECT TOP (1) 0 FROM ParametrosAcumuladoresTiposOperacoes 
 WHERE id_produto = @idProduto and id_operacao=@id_operacao)
 		INSERT INTO ParametrosAcumuladoresTiposOperacoes 
-(ID_PRODUTO, ID_OPERACAO, QtdMaxDia, QtdMaxSemana, QtdMaxMes, 
-ValorMaxDia, ValorMaxSemana, ValorMaxMes)
+(ID_PRODUTO, ID_OPERACAO, QtdMaxDia, QtdMaxSemana, QtdMaxMes, ValorMaxDia, ValorMaxSemana, ValorMaxMes)
 		Values(@idProduto, @id_operacao, 4, Null, Null, 2000, Null, Null)
 
 
@@ -54,8 +53,7 @@ ValorMaxDia, ValorMaxSemana, ValorMaxMes)
 			,tpos.codigoprocessamento--'003000' -- compra
 			,tpos.id_operacao      -- operacao 318
 			,codigomcc from mcc
-			outer apply (select id_operacao,codigoprocessamento 
-from tiposoperacoes where Id_Operacao in (@id_operacao) ) tpos;
+			outer apply (select id_operacao,codigoprocessamento from tiposoperacoes where Id_Operacao in (@id_operacao) ) tpos;
 	END
 ```
 -- Ao rodar a query acima, serão cadastrados todos os MCC do id_produto para id_estabelecimento preenchidos.
