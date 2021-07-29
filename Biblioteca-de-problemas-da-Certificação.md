@@ -118,3 +118,16 @@ Outra coisa que pode ser verificada também é a regra de associação "CONTA_EM
 ## 13 - Retorno do bit 54
 
 Quando não quiser que retorne o bit 54 deve desativar a regra RETORNA_SALDO
+
+## 14 - "motivoResposta" : "ERRO_NA_VALIDACAO", e  "content" : "Erro em callable calcula_parcela do conjunto class br.com.conductor.odin.core.origem.mastercard.ValidadorServiceMastercard."
+
+Quando der esse erro, provavelmente o emissor está sem a cotação do dólar. 
+-- Consulta para saber se o emissor tem cotação:
+```
+SELECT dbo.Fc_cotacaodolar(Getdate())
+```
+-- Caso retorne null, procurar em outro emissor a cotação que esteja mais atualizada rodando o select abaixo:
+```
+select * from cotacaodolar
+```
+-- Copiar as informações e add no emissor que está null.
