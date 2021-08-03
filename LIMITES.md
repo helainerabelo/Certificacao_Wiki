@@ -1,7 +1,18 @@
-Para transações DÉBITO:
+Para sensibilizar o limite, é necessário acessar a tabela **FlagsDispComprasParcs** passando o Id Operação da transação, setando o valor "-1", conforme orientações abaixo:
 
-- Sensibilizar o limite na tabela FlagsDispComprasParcs pelo Id Operação e alterar o campo VcompraDG para transações nacionais e o campo VcontratoDG para transações internacionais com o valor "-1" na linha de Compara 
+`select * from FlagsDispComprasParcs where Id_Operacao = 10473 -- trocar o id_operacao`
 
+**Transações nacionais**: devemos alterar a coluna **VcompraDG**
 
-Para transações CRÉDITO:
+**Transações internacionais:** devemos alterar a coluna **VcontratoDG** 
 
+Para transações **DÉBITO**:
+- Devemos inserir o valor "-1" na linha de **Compara** 
+
+`update FlagsDispComprasParcs set VcompraDG = -1 where Id_FlagsDispComprasParcs = 1048 and TipoRegistro = Compara' -- LEMBRAR DE TROCAR O Id_FlagsDispComprasParcs`
+
+Para transações **CRÉDITO**:
+- Devemos inserir o valor "-1" na linha de **Altera**
+*Obs.: Para compra à vista, parcelada e saque
+
+`update FlagsDispComprasParcs set VcompraDG = -1 where Id_FlagsDispComprasParcs = 1048 and TipoRegistro = Altera' -- LEMBRAR DE TROCAR O Id_FlagsDispComprasParcs`
