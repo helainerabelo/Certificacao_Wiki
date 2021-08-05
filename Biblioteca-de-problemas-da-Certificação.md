@@ -131,3 +131,19 @@ SELECT dbo.Fc_cotacaodolar(Getdate())
 select * from cotacaodolar
 ```
 -- Copiar as informações e add no emissor que está null.
+
+## 15 - "motivoRespotas": BLOQUEADO_STATUS_CONTA""
+
+Conta não está apta pra uso. Necessário atualizar o status na tabela Contas. Para isso, vai ser preciso pegar o id_conta. Uma opção é pela consulta do cartão real:
+`SELECT * FROM cartoes where cartaohash = HASHBYTES('MD5', '4179583062511615') -- LEMBRAR DE TROCAR NÚMERO DO CARTÃO`
+
+Com o id_conta, verificar o Status:
+`select * from StatusConta`
+
+Atualizar o status da conta:
+`update Contas set status = 0 where id_conta = 1 -- Lembrar de mudar o id da conta`
+
+## 16 - Pré-Autorização Inicial MCCelegível - Negar a venda
+
+Ativar a regra:
+16|NAO_PERMITE_PRE_AUT|Não permite pre autorização
