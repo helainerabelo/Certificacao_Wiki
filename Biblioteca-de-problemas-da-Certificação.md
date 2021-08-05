@@ -59,9 +59,6 @@ Verificar se a regra SENHA_THALES está ativada, caso não, ativá-la. Essa regr
 
 ## 9 - "motivoResposta" : "ERRO_NA_VALIDACAO"
 
-## Caso de erro na regra cavv_thales deve ser adicionada as chaves CVK_3DS_ACS e CVK_3DS_BAN
-
-
 ## "content" : "Erro em callable senha_thales do conjunto class br.com.conductor.odin.core.origem.tecban.ValidadorServiceTecban."
 
 - Na base do emissor, faz a consulta do cartão real e verifica se a coluna SenhaVisa está null:
@@ -147,3 +144,7 @@ Atualizar o status da conta:
 
 Ativar a regra:
 16|NAO_PERMITE_PRE_AUT|Não permite pre autorização
+
+## 17 - CAVV_INVALIDO
+
+Caso de erro na regra cavv_thales deve ser adicionada as chaves CVK_3DS_ACS e CVK_3DS_BAN
