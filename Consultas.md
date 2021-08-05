@@ -30,7 +30,7 @@ UPDATE CARTOES SET STATUS = 1, QtdSenhasIncorretas = 0, Estagio = 6
 ```
 
 ## 5 - Adicionar limite ao cartão
--- ADICIONA LIMITE (Roda na base do emissor)
+-- Roda na base do emissor
 
 ```
 update limitesdisponibilidades
