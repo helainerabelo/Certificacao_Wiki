@@ -15,4 +15,9 @@ Para transações **CRÉDITO**:
 - Devemos inserir o valor "-1" na linha de **Altera**
 *Obs.: Para compra à vista, parcelada e saque
 
-`update FlagsDispComprasParcs set VcompraDG = -1 where Id_FlagsDispComprasParcs = 1048 and TipoRegistro = Altera' -- LEMBRAR DE TROCAR O Id_FlagsDispComprasParcs`
+`update FlagsDispComprasParcs set VcompraDG = -1 where Id_FlagsDispComprasParcs = 1048 and TipoRegistro = Altera' -- LEMBRAR DE TROCAR O Id_FlagsDispComprasParcs`[
+
+
+Limite Contactless **SEM SENHA**:
+
+Ativar a regra LIMITE_CONTACTLESS_SEM_SENHA e adicionar/alterar o limite na tabela ControleConfiguracoesCartoes na base do EMISSOR
