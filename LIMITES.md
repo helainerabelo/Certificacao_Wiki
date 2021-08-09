@@ -21,3 +21,10 @@ Para transações **CRÉDITO**:
 Limite Contactless **SEM SENHA**:
 
 Ativar a regra LIMITE_CONTACTLESS_SEM_SENHA e adicionar/alterar o limite na tabela ControleConfiguracoesCartoes na base do EMISSOR
+
+Exemplo:
+- Atualizar o id_cartao e valor limite de acordo com a necessidade
+insert into ControleConfiguracoesCartoes
+(Id_Cartao, PermiteEcommerce, PermiteSaque, PermiteWallet, PermiteControleMCC, PermiteCompraInternacional, PermiteTarjaMagnetica, PermiteContactless, limiteContactlessSemSenha, FuncaoAtiva)
+values
+(24097263,1,1,1,1,1,1,1,'200.00',0)
