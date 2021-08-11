@@ -1,4 +1,4 @@
-Erro para restartar ou dar stop e start no xinetd do servidor 10.75.33.100
+**1- Erro para restartar ou dar stop e start no xinetd do servidor 10.75.33.100**
 
 ![image.png](/.attachments/image-17359111-c1bb-4c3a-9217-a84ca8b564c6.png)
 
