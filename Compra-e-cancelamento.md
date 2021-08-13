@@ -175,6 +175,8 @@ MTI|NSU ORIGINAL|HORA E DATA (BIT 7)|BIT32 ORIGINAL|BIT 33
 
 Bit 90: 0100 005635 0517190021 00000476113 00000000000
 
+Lembrar de trocar o bit 38 da transação original na mensageria de reversão
+
 
 
 
