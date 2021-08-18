@@ -1,8 +1,13 @@
 **1- Manual Elo sobre as mensagerias das transações de Autorização**
-[Elo_2020 Elo - Especificação Técnica - Mensageria de Autorização 20.2.pdf](/.attachments/Elo_2020%20Elo%20-%20Especificação%20Técnica%20-%20Mensageria%20de%20Autorização%2020.2-ce25c3eb-d274-4d13-8afb-b53ef50ec60e.pdf)
+[2021 Elo - Manual de Mensageria de Autorização 21.2.pdf](/.attachments/2021%20Elo%20-%20Manual%20de%20Mensageria%20de%20Autorização%2021.2-d69a8525-1817-4ddd-812f-52a32eada357.pdf)
+[2020 Elo - Manual de Mensageria de Autorização 21.1.pdf](/.attachments/2020%20Elo%20-%20Manual%20de%20Mensageria%20de%20Autorização%2021.1-cde5dfc0-8797-4cce-bf28-27c1ed9e17b1.pdf)
 
 **2- Manual Elo sobre Liquidação**
+[2021 Elo - Mensageria de Liquidação - Nacional 21.2.pdf](/.attachments/2021%20Elo%20-%20Mensageria%20de%20Liquidação%20-%20Nacional%2021.2-76916df0-f99d-4827-b8ec-a6118ba7197d.pdf)
 [2020 Elo - Mensageria de Liquidação - Nacional 21.1.pdf](/.attachments/2020%20Elo%20-%20Mensageria%20de%20Liquidação%20-%20Nacional%2021.1-51a17149-ec2b-4b4f-8caa-8ed8621ae03a.pdf)
+
+-**-> Internacional**
+[2021 Elo - Mensageria de Liquidação - Internacional 21.2.pdf](/.attachments/2021%20Elo%20-%20Mensageria%20de%20Liquidação%20-%20Internacional%2021.2-552763bb-6afa-49b6-9eb2-e974aca9c0b1.pdf)
 
 **3- Manual Master mensageria Autorização**
 [Master Card_CustomerInterfaceSpecification-2020.pdf](/.attachments/Master%20Card_CustomerInterfaceSpecification-2020-e3810115-eac2-4994-8ba7-0b611629f49d.pdf)
