@@ -24,23 +24,26 @@
 e
 [liquidacao.sql](/.attachments/liquidacao-4a96f302-9905-4996-aabb-6fe8471a138b.sql)
 
-**7- Link do Odin - Autorizador Conductor**
+**7- Manuais Compra com Saque Elo**
+[0 - Elo - Manual Saque e Compra com Troco 2.0.pdf](/.attachments/0%20-%20Elo%20-%20Manual%20Saque%20e%20Compra%20com%20Troco%202.0-22c0cef1-808c-4583-99e2-f7a81ba8482c.pdf)
+
+**8- Link do Odin - Autorizador Conductor**
 https://rancher-gcp-hml.devcdt.com.br/login
 
-**8- Link do SGR - Usado pela certificação para o processamento do arquivo de liquidação**
+**9- Link do SGR - Usado pela certificação para o processamento do arquivo de liquidação**
 https://10.75.130.18:8080/
 
-**9- Link do storage do SGR, onde importar os arquivos da liquidação para que o SGR execute a rotina**
+**10- Link do storage do SGR, onde importar os arquivos da liquidação para que o SGR execute a rotina**
 https://portal.azure.com/#home
 -> Caminho: Storage accounts -> sgrgkehmlg -> File shares -> sgrgkehmlg -> sgr-hmlg-primario -> importacao -> conciliaÃ§Ã£o new elo -> builderjobimportararquivoincoming -> "importar o arquivo da liquidação aqui"
 
-**10- Manual de Autorização externa do tipo rest/api**
+**11- Manual de Autorização externa do tipo rest/api**
 [API Hooking - Autorização Externa API_Especificação - API Hooking (3).pdf](/.attachments/API%20Hooking%20-%20Autorização%20Externa%20API_Especificação%20-%20API%20Hooking%20(3)-7a10af68-c4ae-4a59-b00a-f36b9924bd79.pdf)
 
-**11- Manual de Autorização externa do tipo socket/iso8583**
+**12- Manual de Autorização externa do tipo socket/iso8583**
 [AutorizadorExterno_AutorizadorExterno.pdf](/.attachments/AutorizadorExterno_AutorizadorExterno-ae369ab9-df77-4764-81ee-409015520ffc.pdf)
 
-**12- Documentação do Clearing (Outras documentações tbm nos menus acessados no mesmo link)**
+**13- Documentação do Clearing (Outras documentações tbm nos menus acessados no mesmo link)**
 Em inglês (geralmente mais completa):
 https://pierflex.conductor.com.br/reference#clearing
 
