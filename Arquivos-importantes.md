@@ -9,6 +9,9 @@
 -**-> Internacional**
 [2021 Elo - Mensageria de Liquidação - Internacional 21.2.pdf](/.attachments/2021%20Elo%20-%20Mensageria%20de%20Liquidação%20-%20Internacional%2021.2-552763bb-6afa-49b6-9eb2-e974aca9c0b1.pdf)
 
+**Manual para processamento da liquidação**
+[MANUAL DA LIQUIDAÇÃO.pdf](/.attachments/MANUAL%20DA%20LIQUIDAÇÃO-58305eb1-69b7-42b0-a90d-822ecc9687ac.pdf)
+
 **3- Manual Master mensageria Autorização**
 [Master Card_CustomerInterfaceSpecification-2020.pdf](/.attachments/Master%20Card_CustomerInterfaceSpecification-2020-e3810115-eac2-4994-8ba7-0b611629f49d.pdf)
 
